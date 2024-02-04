@@ -94,14 +94,37 @@ nav li a:hover {
 }
 
 .right img {
+    padding: 1.5rem;
+    filter: grayscale(1);
+    transition: all 1s;
+    animation: scaleImage 5s linear infinite;
     width: 35%;
     height: 35%;
     margin-top: 150px;
     margin-left: 200px;
-    border-radius: 20px;
-    border: 2px solid rgb(34, 34, 34);
-
+    z-index: 10;
 }
+
+
+@keyframes scaleImage {
+    0% {
+        filter: grayscale(0);
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+        filter: grayscale(0);
+        box-shadow: 3px 3px 10px black;
+    }
+    
+    100% {
+        transform: scale(1);
+        filter: grayscale(0);
+    }
+}
+
+
 
 
 
@@ -115,7 +138,7 @@ nav li a:hover {
     width: 725px;
     color: rgba(242, 237, 237, 0.713);
     margin: 0 auto;
-   
+
 
     ul {
         list-style: none;
@@ -137,9 +160,10 @@ nav li a:hover {
         word-wrap: break-word;
     }
 }
- .center-text{
+
+.center-text {
     margin-top: 15px;
- }
+}
 
 
 
@@ -159,7 +183,7 @@ nav li a:hover {
 /*------------------------------About Me------------------------------------------------------*/
 #M2 {
     padding: 15%;
-    color: #ababab;
+    color: #fff;
 
 }
 
@@ -187,7 +211,7 @@ nav li a:hover {
 .col-2 font {
     font-size: 60px;
     font-weight: 600;
-    color: #ababab;
+    color: #fff;
 }
 
 /*-----------------My Project-------------------------------------------------*/
